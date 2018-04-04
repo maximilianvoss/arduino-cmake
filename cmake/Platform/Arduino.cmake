@@ -819,7 +819,7 @@ function(get_arduino_flags COMPILE_FLAGS_VAR LINK_FLAGS_VAR BOARD_ID MANUAL)
         endif()
 
         # output
-        set(COMPILE_FLAGS "")
+        set(COMPILE_FLAGS " -g -std=c++11 -Wall -pedantic ")
 
         if(${BOARD_ID}${ARDUINO_CPUMENU}.build.f_cpu)
             set(COMPILE_FLAGS "${COMPILE_FLAGS} -DF_CPU=${${BOARD_ID}${ARDUINO_CPUMENU}.build.f_cpu}")
